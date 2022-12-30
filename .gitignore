@@ -1,0 +1,8 @@
+/build
+/bin
+.*.swp
+.*.swo
+tags
+*.pyc
+cscope.*
+*.log

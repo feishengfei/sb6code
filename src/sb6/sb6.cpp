@@ -54,3 +54,13 @@ int sb6IsExtensionSupported(const char * extname)
 
     return 0;
 }
+void APIENTRY sb6::application::debug_callback(GLenum source,
+                                               GLenum type,
+                                               GLuint id,
+                                               GLenum severity,
+                                               GLsizei length,
+                                               const GLchar* message,
+                                               GLvoid* userParam)
+{
+    reinterpret_cast<application *>(userParam)->onDebugMessage(source, type, id, severity, length, message);
+}
